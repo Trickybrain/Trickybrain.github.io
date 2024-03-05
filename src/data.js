@@ -3,9 +3,6 @@ import { Icon } from "@iconify/react";
 
 // Navbar Logo image (uncomment below and import your image)
 
-// Projects Images (add your images to the images directory and import below)
-import Logo from "./assets/logo.svg";
-
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./assets/hero-light.jpg";
 import HeroDark from "./assets/hero-dark.jpg";
