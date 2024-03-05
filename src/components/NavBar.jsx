@@ -4,6 +4,7 @@ import { useAppContext } from "../appContext";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import '../styles/global.css';
 // Icons
 import { Icon } from "@iconify/react";
 // Components
@@ -40,6 +41,7 @@ const StyledSwitch = styled.label`
     transition: var(--transition);
   }
 `;
+
 
 const FixedNavSpacer = styled.div`
   height: var(--nav-height);
@@ -87,8 +89,8 @@ export default function NavBar({ Logo }) {
     to: [
       { id: "1T", name: "Home", to: "Home" },
       { id: "2T", name: "About Me", to: "About" },
-      { id: "3T", name: "Skills", to: "Skills" },
-      { id: "4T", name: "Projects", to: "Projects" },
+      { id: "3T", name: "Projects", to: "Projects" },
+      { id: "4T", name: "Skills", to: "Skills" },
       { id: "5T", name: "Contact", to: "Contact" },
     ],
   };
@@ -106,7 +108,7 @@ export default function NavBar({ Logo }) {
         fixed="top"
       >
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand className="navbar-brand-custom">
             <img
               alt="Logo"
               src={Logo}
@@ -129,7 +131,7 @@ export default function NavBar({ Logo }) {
                           to={el.to}
                           spy={true}
                           activeClass="active"
-                          className="nav-link"
+                          className="nav-link nav-link-custom"
                           onClick={closeExpanded}
                         >
                           {el.name}

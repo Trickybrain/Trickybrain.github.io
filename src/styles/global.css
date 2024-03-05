@@ -2,3 +2,19 @@
     width: 60px;
     height: auto;
   }
+
+.navbar-text {
+  font-size: 1.2rem; 
+  text-align: center; 
+}
+
+.navbar-brand-custom {
+  font-size: 1.5rem; 
+  justify-content: center;
+  display: flex; 
+  
+}
+
+.nav-link-custom {
+  font-size: 1.4rem;
+}
