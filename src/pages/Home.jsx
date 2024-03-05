@@ -1,0 +1,38 @@
+import React from "react";
+import { useSelector } from "react-redux";
+import { selectData } from "../pages/homeSlice";
+// Components
+import Hero from "../components/Hero";
+import AboutMe from "../components/AboutMe";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+// import EProjects from "../components/Example_Project";
+import Contact from "../components/Contact";
+import { BackToTop } from "../components/globalStyledComponents";
+import Footer from "../components/Footer";
+
+export default function Home() {
+  const { name } = useSelector(selectData);
+
+  React.useEffect(
+    function () {
+      document.title = `Edwin's Portfolio`;
+    },
+    [name]
+  );
+
+  return (
+    <>
+      <Hero />
+      <main>
+        <AboutMe />
+        {/* <EProjects /> */}
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
+      <BackToTop home={"Home"} />
+      <Footer />
+    </>
+  );
+}
